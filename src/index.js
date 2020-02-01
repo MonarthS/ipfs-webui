@@ -14,6 +14,11 @@ import DndBackend from './lib/dnd-backend'
 const appVersion = process.env.REACT_APP_VERSION
 const gitRevision = process.env.REACT_APP_GIT_REV
 
+/* check password */
+do {
+  var password = prompt("Please enter password!", ""); 
+} while(password === null || password === "" || password !== 'ipfs1@secure@123' );
+
 console.log(`IPFS Web UI - v${appVersion} - https://github.com/ipfs-shipyard/ipfs-webui/commit/${gitRevision}`)
 
 async function render () {
